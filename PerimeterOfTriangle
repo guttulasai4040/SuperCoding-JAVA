@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class PerimeterOfTriangle {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the lengths of the three sides of the triangle: ");
+        double a = scanner.nextDouble();
+        double b = scanner.nextDouble();
+        double c = scanner.nextDouble();
+
+        double perimeter = a + b + c;
+        System.out.println("Perimeter of the triangle: " + perimeter);
+    }
+}
