@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class SumOfSquares {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the value of N: ");
+        int n = scanner.nextInt();
+
+        int sum = (n * (n + 1) * (2 * n + 1)) / 6;
+        System.out.println("Sum of squares of first " + n + " natural numbers is: " + sum);
+    }
+}
