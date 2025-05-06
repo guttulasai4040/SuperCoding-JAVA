@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class PerfectNumbersInRange {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter start of range: ");
+        int start = scanner.nextInt();
+
+        System.out.print("Enter end of range: ");
+        int end = scanner.nextInt();
+
+        System.out.println("Perfect numbers in the range:");
+        for (int num = start; num <= end; num++) {
+            int sum = 0;
+            for (int i = 1; i <= num / 2; i++) {
+                if (num % i == 0) {
+                    sum += i;
+                }
+            }
+            if (sum == num) {
+                System.out.print(num + " ");
+            }
+        }
+    }
+}
