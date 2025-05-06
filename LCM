@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class LCM {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int a = scanner.nextInt();
+
+        System.out.print("Enter second number: ");
+        int b = scanner.nextInt();
+
+        int gcd = a, tempB = b;
+        while (tempB != 0) {
+            int temp = tempB;
+            tempB = gcd % tempB;
+            gcd = temp;
+        }
+
+        int lcm = (a * b) / gcd;
+        System.out.println("LCM is: " + lcm);
+    }
+}
