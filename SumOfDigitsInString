@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class SumOfDigitsInString {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String str = scanner.nextLine();
+
+        int sum = 0;
+        for (char c : str.toCharArray()) {
+            if (Character.isDigit(c)) {
+                sum += Character.getNumericValue(c);
+            }
+        }
+
+        System.out.println("Sum of digits in the string: " + sum);
+    }
+}
