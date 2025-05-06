@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class PerfectNumbersInRange {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the range (start and end): ");
+        int start = scanner.nextInt();
+        int end = scanner.nextInt();
+
+        for (int num = start; num <= end; num++) {
+            int sum = 0;
+            for (int i = 1; i < num; i++) {
+                if (num % i == 0) {
+                    sum += i;
+                }
+            }
+            if (sum == num) {
+                System.out.println(num + " is a Perfect Number.");
+            }
+        }
+    }
+}
