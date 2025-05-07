@@ -1,0 +1,9 @@
+public class CharToASCII {
+    public static int charToASCII(char c) {
+        return (int) c;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(charToASCII('A'));
+    }
+}
