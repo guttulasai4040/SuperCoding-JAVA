@@ -1,0 +1,9 @@
+public class ASCIIToChar {
+    public static char asciiToChar(int ascii) {
+        return (char) ascii;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(asciiToChar(65));
+    }
+}
