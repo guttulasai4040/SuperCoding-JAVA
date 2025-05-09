@@ -1,0 +1,13 @@
+public class PalindromeNumberRecursion {
+    public static boolean isPalindrome(int num, int temp) {
+        if (num == 0) {
+            return temp == num;
+        }
+        temp = temp * 10 + num % 10;
+        return isPalindrome(num / 10, temp);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(isPalindrome(121, 0));
+    }
+}
