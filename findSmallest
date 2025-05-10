@@ -1,0 +1,14 @@
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {1, 5, 3, 9, 2};
+        System.out.println("Smallest element: " + findSmallest(arr, arr.length - 1));
+    }
+
+    public static int findSmallest(int[] arr, int index) {
+        if (index == 0) {
+            return arr[0];
+        }
+        int smallest = findSmallest(arr, index - 1);
+        return Math.min(smallest, arr[index]);
+    }
+}
