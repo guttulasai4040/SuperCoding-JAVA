@@ -1,0 +1,16 @@
+class Main{
+    public static void main(String[] args){
+        String str="sai guttula the bear";
+        
+        String[] split= str.split(" ");
+        String words= split[0];
+        
+        for(String word: split){
+            if(word.length() > words.length()){
+                words=word;
+            }
+        }
+        
+        System.out.println(words);
+    }
+}
