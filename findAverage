@@ -1,0 +1,16 @@
+public class Main {
+    public static void main(String[] args) {
+        int[][] matrix = {{1, 2}, {3, 4}, {5, 6}};
+        System.out.println("Average: " + findAverage(matrix));
+    }
+
+    public static double findAverage(int[][] matrix) {
+        int sum = 0, count = 0;
+        for (int[] row : matrix) {
+            for (int num : row) {
+                sum += num;
+                count++;
+            }
+        }
+        return (double) sum / count;
+    }
