@@ -1,0 +1,21 @@
+public class Main {
+    public static void main(String[] args) {
+        int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        printBorder(matrix);
+    }
+
+    public static void printBorder(int[][] matrix) {
+        for (int i = 0; i < matrix[0].length; i++) {
+            System.out.print(matrix[0][i] + " ");
+        }
+        for (int i = 1; i < matrix.length; i++) {
+            System.out.print(matrix[i][matrix[i].length - 1] + " ");
+        }
+        for (int i = matrix[0].length - 2; i >= 0; i--) {
+            System.out.print(matrix[matrix.length - 1][i] + " ");
+        }
+        for (int i = matrix.length - 2; i > 0; i--) {
+            System.out.print(matrix[i][0] + " ");
+        }
+    }
+}
