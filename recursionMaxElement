@@ -1,0 +1,13 @@
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {1, 5, 3, 9, 2};
+        System.out.println("Largest element: " + findLargest(arr, arr.length - 1));
+    }
+
+    public static int findLargest(int[] arr, int index) {
+        if (index == 0) {
+            return arr[0];
+        }
+        int largest = findLargest(arr, index - 1);
+        return Math.max(largest, arr[index]);
+    }
