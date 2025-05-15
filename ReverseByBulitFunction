@@ -1,0 +1,10 @@
+class Main{
+    public static void main(String[] args){
+        String str="Sai guttula";
+        
+        StringBuilder sb = new StringBuilder(str);
+        String str1= sb.reverse().toString();
+        
+        System.out.println(str1);
+    }
+}
