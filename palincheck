@@ -1,0 +1,16 @@
+
+
+class Main{
+    public static void main(String[] args){
+        String str="Sai guttula";
+        
+        StringBuilder sb = new StringBuilder(str);
+        String str1= sb.reverse().toString();
+        
+        if(str.equals(str1)){
+            System.out.println("yes");
+        } else {
+            System.out.println("No");
+        }
+    }
+}
