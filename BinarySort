@@ -1,0 +1,13 @@
+public class BinarySort {
+    public static void binarySort(int[] arr) {
+        Arrays.sort(arr); // Java's Arrays.sort() uses a modified version of QuickSort (binary partitioning is involved)
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {64, 25, 12, 22, 11};
+        binarySort(arr);
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+    }
+}
