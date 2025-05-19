@@ -1,0 +1,15 @@
+public class Main {
+    public static void main(String[] args) {
+        String str = "middle";
+        System.out.println("Middle character: " + getMiddleCharacter(str));
+    }
+
+    public static String getMiddleCharacter(String str) {
+        int len = str.length();
+        if (len % 2 == 0) {
+            return str.substring(len / 2 - 1, len / 2 + 1);
+        } else {
+            return String.valueOf(str.charAt(len / 2));
+        }
+    }
+}
