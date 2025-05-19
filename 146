@@ -1,0 +1,10 @@
+public class Main {
+    public static void main(String[] args) {
+        String str = "123456";
+        System.out.println("Contains only digits: " + isNumeric(str));
+    }
+
+    public static boolean isNumeric(String str) {
+        return str.matches("\\d+");
+    }
+}
