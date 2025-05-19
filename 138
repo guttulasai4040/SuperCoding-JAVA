@@ -1,0 +1,30 @@
+public class Main {
+    public static void main(String[] args) {
+        String str = "babad";
+        System.out.println("Longest palindrome: " + longestPalindrome(str));
+    }
+
+    public static String longestPalindrome(String str) {
+        if (str == null || str.length() < 1) return "";
+        int start = 0, maxLength = 1;
+        for (int i = 0; i < str.length(); i++) {
+            int len1 = expandAroundCenter(str, i, i);
+            int len2 = expandAroundCenter(str, i, i + 1);
+            int len = Math.max(len1, len2);
+            if (len > maxLength) {
+                maxLength = len;
+                start = i - (maxLength - 1) / 2;
+            }
+        }
+        return str.substring(start, start + maxLength);
+    }
+
+    public static int expandAroundCenter(String str, int left, int right) {
+        int L = left, R = right;
+        while (L >= 0 && R < str.length() && str.charAt(L) == str.charAt(R)) {
+            L--;
+            R++;
+        }
+        return R - L - 1;
+    }
+}
