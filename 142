@@ -1,0 +1,19 @@
+public class Main {
+    public static void main(String[] args) {
+        String str = "swiss";
+        System.out.println("First non-repeating character: " + firstUniqChar(str));
+    }
+
+    public static char firstUniqChar(String str) {
+        int[] count = new int[256];
+        for (char c : str.toCharArray()) {
+            count[c]++;
+        }
+        for (char c : str.toCharArray()) {
+            if (count[c] == 1) {
+                return c;
+            }
+        }
+        return '\0'; // return null character if no unique char is found
+    }
+}
