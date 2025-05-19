@@ -1,0 +1,15 @@
+public class Main {
+    public static void main(String[] args) {
+        String str = "abcdef";
+        System.out.println("Has all unique characters: " + hasUniqueCharacters(str));
+    }
+
+    public static boolean hasUniqueCharacters(String str) {
+        boolean[] seen = new boolean[256];
+        for (char c : str.toCharArray()) {
+            if (seen[c]) return false;
+            seen[c] = true;
+        }
+        return true;
+    }
+}
