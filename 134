@@ -1,0 +1,17 @@
+public class Main {
+    public static void main(String[] args) {
+        String str = "hello";
+        char target = 'l';
+        System.out.println("Occurrences of " + target + ": " + countOccurrences(str, target));
+    }
+
+    public static int countOccurrences(String str, char target) {
+        int count = 0;
+        for (char c : str.toCharArray()) {
+            if (c == target) {
+                count++;
+            }
+        }
+        return count;
+    }
+}
