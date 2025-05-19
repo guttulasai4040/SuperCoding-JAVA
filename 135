@@ -1,0 +1,10 @@
+public class Main {
+    public static void main(String[] args) {
+        String email = "test@example.com";
+        System.out.println("Is valid email: " + isValidEmail(email));
+    }
+
+    public static boolean isValidEmail(String email) {
+        return email.matches("^[\\w.-]+@[\\w.-]+\\.\\w+$");
+    }
+}
