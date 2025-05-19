@@ -1,0 +1,18 @@
+public class Main {
+    public static void main(String[] args) {
+        String str = "abcabcbb";
+        System.out.println("Length of longest substring without repeating characters: " + lengthOfLongestSubstring(str));
+    }
+
+    public static int lengthOfLongestSubstring(String str) {
+        int n = str.length();
+        int maxLength = 0;
+        int[] map = new int[256];
+        for (int left = 0, right = 0; right < n; right++) {
+            left = Math.max(left, map[str.charAt(right)]);
+            maxLength = Math.max(maxLength, right - left + 1);
+            map[str.charAt(right)] = right + 1;
+        }
+        return maxLength;
+    }
+}
