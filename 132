@@ -1,0 +1,10 @@
+public class Main {
+    public static void main(String[] args) {
+        String str = "Hello World";
+        System.out.println("Replaced string: " + replaceSpaces(str));
+    }
+
+    public static String replaceSpaces(String str) {
+        return str.replace(" ", "%20");
+    }
+}
