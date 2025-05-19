@@ -1,0 +1,14 @@
+public class Main {
+    public static void main(String[] args) {
+        String str = "12345";
+        System.out.println("Converted integer: " + stringToInt(str));
+    }
+
+    public static int stringToInt(String str) {
+        int num = 0;
+        for (char c : str.toCharArray()) {
+            num = num * 10 + (c - '0');
+        }
+        return num;
+    }
+}
