@@ -1,0 +1,20 @@
+public class Main {
+    public static void main(String[] args) {
+        String str1 = "listen";
+        String str2 = "silent";
+        System.out.println("Are anagrams: " + areAnagrams(str1, str2));
+    }
+
+    public static boolean areAnagrams(String str1, String str2) {
+        if (str1.length() != str2.length()) return false;
+        int[] count = new int[256];
+        for (char c : str1.toCharArray()) {
+            count[c]++;
+        }
+        for (char c : str2.toCharArray()) {
+            if (count[c] == 0) return false;
+            count[c]--;
+        }
+        return true;
+    }
+}
