@@ -1,0 +1,18 @@
+class Main{
+    public  static String reverse(String str){
+        StringBuilder sb = new StringBuilder();
+        String[] str1=str.split(" ");
+        
+        for(String w: str1){
+            sb.append(w).append(" ");
+        }
+        
+        return sb.reverse().toString().trim();
+    }
+    
+    public static void main(String[] args){
+        String str3="Guttula sai  am i, hey";
+        
+        System.out.println(reverse(str3));
+    }
+}
