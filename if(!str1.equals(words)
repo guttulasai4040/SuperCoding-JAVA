@@ -1,0 +1,18 @@
+class Main{
+    public static void main(String[] args){
+        String str="I am sai Guttula theBear";
+        String str1= "theBear";
+        String str3="";
+        String[] split = str.split(" ");
+        
+        for(String words: split){
+            if(!str1.equals(words)) {
+            str3 += " " + words;
+            }
+        }
+            
+        System.out.println(str3.trim());
+        
+        
+    }
+}
