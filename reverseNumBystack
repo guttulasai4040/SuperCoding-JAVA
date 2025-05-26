@@ -1,0 +1,21 @@
+import java.util.Stack;
+
+
+class Main{
+    public static void main(String[] args){
+        Stack<Integer> stack = new Stack<>();
+        int num=987654321;
+        
+        while(num!=0){
+            int n = num%10;
+            stack.push(n);
+            num /= 10;
+        }
+        
+        while(!stack.isEmpty()){
+            int i=stack.pop();
+            System.out.print(i+" ");
+        }
+    }
+    
+}
