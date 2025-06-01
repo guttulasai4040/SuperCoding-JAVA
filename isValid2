@@ -1,0 +1,33 @@
+import java.util.Arrays;
+
+class Main{
+    public static boolean isValid(String str1, String str2, String str3) {
+        
+        if(str1.length()+str2.length() != str3.length()) return false;
+        
+        char[] temp = (str1+str2).toCharArray();
+        char[] store = str3.toCharArray();
+        
+        Arrays.sort(temp);
+        Arrays.sort(store);
+        
+        if(Arrays.equals(temp, store)){
+            return true;
+        } else{
+            return false;
+        }
+        
+    }
+    
+    public static void main(String[] args){
+        String str4="abc";
+        String str5="def";
+        String str6="defabc";
+        
+        if(isValid(str4, str5,str6)){
+            System.out.println("yes");
+           }else{ 
+               System.out.println("NO");
+           }
+    }
+}
